@@ -15,15 +15,19 @@ public class Main extends ApplicationAdapter {
     @Override
     public void create() {
         batch = new SpriteBatch();
-        image = new Texture("Player.aseprite");
+       image = new Texture("player.png");;
+
     }
 
     @Override
     public void render() {
+
+//        Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 //        ScreenUtils.clear(0.15f, 0.15f, 0.2f, 1f);
         batch.begin();
         batch.draw(image, 100, 100);
+
         batch.end();
     }
 
@@ -33,3 +37,4 @@ public class Main extends ApplicationAdapter {
         image.dispose();
     }
 }
+
